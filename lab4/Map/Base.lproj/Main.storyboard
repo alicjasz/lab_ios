@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eKq-I0-wKl">
+                                <frame key="frameInset" minX="-1" width="376" height="639"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="T8e-K9-SQh">
+                                        <frame key="frameInset" width="376" height="639"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j2J-2u-1Gy">
+                                                <frame key="frameInset" width="376" height="609"/>
+                                                <subviews>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="as5-cY-bjn">
+                                                        <frame key="frameInset" width="376" height="609"/>
+                                                    </mapView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BmY-zx-nkN">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afd-58-9dX">
+                                                        <state key="normal" title="Start"/>
+                                                        <connections>
+                                                            <action selector="startButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R85-4H-vBH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq4-NG-7Sa">
+                                                        <state key="normal" title="Stop"/>
+                                                        <connections>
+                                                            <action selector="stopButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cwv-wK-HtT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dC-YC-vju">
+                                                        <state key="normal" title="Clear"/>
+                                                        <connections>
+                                                            <action selector="clearButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOS-xu-mcd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="j2J-2u-1Gy" firstAttribute="leading" secondItem="T8e-K9-SQh" secondAttribute="leading" id="0cC-28-y0D"/>
+                                            <constraint firstItem="BmY-zx-nkN" firstAttribute="leading" secondItem="T8e-K9-SQh" secondAttribute="leading" constant="94" id="nY0-OE-Dg5"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="T8e-K9-SQh" firstAttribute="leading" secondItem="eKq-I0-wKl" secondAttribute="leading" id="dgc-KY-yVy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eKq-I0-wKl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NIu-Be-flO"/>
+                            <constraint firstAttribute="trailing" secondItem="eKq-I0-wKl" secondAttribute="trailing" id="kld-4Y-004"/>
+                            <constraint firstItem="eKq-I0-wKl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lBP-1z-Jw8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eKq-I0-wKl" secondAttribute="bottom" constant="28" id="t6I-da-jfV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="5dC-YC-vju" id="Yaq-FY-4ZQ"/>
+                        <outlet property="mapView" destination="as5-cY-bjn" id="lbI-Zi-UuO"/>
+                        <outlet property="startButton" destination="afd-58-9dX" id="NCg-sD-k1X"/>
+                        <outlet property="stopButton" destination="nq4-NG-7Sa" id="b6g-0j-zFv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
